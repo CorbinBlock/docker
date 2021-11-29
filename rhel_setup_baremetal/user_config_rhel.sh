@@ -13,3 +13,11 @@ git config --global user.email
 
 sudo dnf install vim -y
 sudo dnf install tmux -y
+
+podman pull fedora:latest
+
+podman pull registry.access.redhat.com/ubi8/ubi:8.5-200
+
+podman pull alpine:latest
+
+podman pull docker.io/library/postgres:latest
