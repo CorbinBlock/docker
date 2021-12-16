@@ -1,0 +1,17 @@
+version: '3.2'
+
+services:
+  db:
+    image: mysql
+    container_name: appsDB
+    restart: always
+    ports:
+    - "6603:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  app:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+    - "8080:80"
