@@ -21,9 +21,9 @@ git --version
 dnf install python39 -y
 python3.9 --version
 
-git config --global user.name CorbinBlock
+git config --global user.name $GIT_USERNAME
 git config --global user.name
-git config --global user.email williamcorbinblock@gmail.com
+git config --global user.email $GIT_EMAIL
 git config --global user.email
 
 dnf install vim -y
