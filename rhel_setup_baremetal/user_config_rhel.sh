@@ -1,7 +1,5 @@
 id
 
-sudo dnf update --allowerasing --nobest
-
 echo 'alias python="python3.9"' >> ~/.bashrc
 tail -n1 ~/.bashrc
 
