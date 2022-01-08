@@ -1,10 +1,8 @@
 FROM debian
 WORKDIR /git
-# ENV FLASK_APP=app.py
-# ENV FLASK_RUN_HOST=0.0.0.0
 RUN apt update -y && apt upgrade -y
-# COPY requirements.txt requirements.txt
-# RUN pip install -r requirements.txt
-# EXPOSE 5000
-# COPY . .
-# CMD ["flask", "run"]
+RUN apt install git -y
+RUN apt install python3 python3-pip -y
+RUN apt install openjdk-11-jdk -y
+RUN export JAVA_HOME=/usr/lib/jvm/openjdk-11-jdk
+RUN export PATH=$PATH:$JAVA_HOME/bin
