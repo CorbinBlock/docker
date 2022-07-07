@@ -36,8 +36,8 @@ def shell_script() -> str:
     sudo apk -U upgrade    
     sudo apk add bash dos2unix git git-lfs keepassxc nano neofetch openssh python3 podman py3-pip sudo tmux vim 
     sudo podman system reset --force
-    git config --global user.name "CorbinBlock"
-    git config --global user.email "williamcorbinblock@gmail.com"
+    git config --global user.name "<user>"
+    git config --global user.email "<email>"
     sudo adduser -G wheel cblock -s /bin/bash
     sudo echo "cblock ALL=(ALL) ALL" > /etc/sudoers.d/cblock && sudo chmod 0440 /etc/sudoers.d/cblock
     python3 -m  pip install --upgrade pip
@@ -102,7 +102,7 @@ def system_profile_heredoc() -> str:
     }
 
     function pi() {
-        ssh -p 52222 cblock@devenvrhel.ddns.net
+        ssh -p <port> <username>@<hostname>
     }
 
     function pw() {
