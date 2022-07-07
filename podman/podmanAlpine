@@ -1,0 +1,8 @@
+FROM docker.io/alpine
+WORKDIR /srv
+VOLUME /srv
+EXPOSE 5000
+COPY apk.py /srv
+RUN apk -U upgrade; apk add python3; python3 apk.py
+# RUN mkdir -p /home/cblock/.data/
+# COPY .keepassxc.txt /home/cblock/.data/.keepassxc.txt

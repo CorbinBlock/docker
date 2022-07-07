@@ -1,0 +1,7 @@
+FROM docker.io/debian
+WORKDIR /srv
+VOLUME /srv
+EXPOSE 5000
+COPY apt.py /srv
+RUN apt-get update && apt-get upgrade -y; apt-get install python3 sudo -y; python3 /srv/apt.py
+COPY .keepassxc.txt /home/cblock/.data/.keepassxc.txt

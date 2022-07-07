@@ -1,0 +1,7 @@
+FROM docker.io/fedora
+WORKDIR /srv
+VOLUME /srv
+EXPOSE 5000
+COPY dnf.py /srv
+# RUN dnf upgrade -y; yum upgrade -y; dnf add python3; python3 dnf.py; mkdir -p /home/cblock/.data/
+# COPY .keepassxc.txt /home/cblock/.data/.keepassxc.txt

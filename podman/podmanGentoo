@@ -1,0 +1,7 @@
+FROM docker.io/gentoo/stage3
+WORKDIR /srv
+VOLUME /srv
+EXPOSE 5000
+COPY portage.py /srv
+# RUN python3 /srv/portage.py; mkdir -p /home/cblock/.data/
+COPY .keepassxc.txt /home/cblock/.data/.keepassxc.txt
